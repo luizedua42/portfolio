@@ -1,0 +1,46 @@
+body {
+	/*dark mode*/
+	background-image: linear-gradient(to right, #2b2b2b 10%, rgb(69, 69, 69));
+	/* light mode */
+	/* background-image: linear-gradient(to right,  rgb(209, 209, 209) 10%, #a1a1a1) */
+	font-family: "chakra petch";
+}
+
+#menu {
+	margin-top: 10dvh;
+	margin-right: 10dvw;
+}
+#slider {
+	margin-top: 4dvh;
+	height: 45dvh;
+}
+
+#contentBody{
+	margin-top: 4dvh;
+	width: 70dvw;
+}
+
+#carousel-content {
+	margin-top: 4dvh;
+}
+
+
+.carousel-control-prev {
+    left: -10%; /* Ajuste para posicionar fora da esquerda */
+}
+.carousel-control-next {
+    right: -10%; /* Ajuste para posicionar fora da direita */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(1, 1, 1, 0.03);
+	height: 100%;
+	 /* Cor de fundo preta com 50% de opacidade */
+    /* padding: 10px; Aumenta a área de clique ao redor da seta */
+}
+
+.skills-list {
+	display: table;
+	margin: 0 auto;
+}
