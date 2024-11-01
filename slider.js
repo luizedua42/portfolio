@@ -2,19 +2,16 @@
 const projetos = [
 	{
 	  titulo: "libft",
-	  descricao: `O projeto libft da 42 é um dos primeiros desafios que realizei
-		e tem o objetivo de desenvolver uma biblioteca personalizada em C, com 
-		funções comuns da biblioteca padrão. 
-		A ideia é recriar funções fundamentais, como strlen, strcpy, atoi e muitas outras, 
-		sem usar funções prontas da linguagem. O projeto é uma ótima introdução 
-		para praticar conceitos importantes como manipulação de strings, 
-		alocação de memória, e ponteiros.<br>
-		Além das funções básicas, você também precisa implementar funções 
-		adicionais para manipulação de listas encadeadas, o que dá uma boa base
-		para os projetos mais complexos que vêm depois. No final, a libft serve
-		como um recurso reutilizável que pode e deve ser integrado a outros
-		projetos ao longo do Common Core. É uma forma de se aprofundar em C e 
-		aprender como funciona uma biblioteca desde o zero.`,
+	  descricao: `O projeto libft envolve criar uma biblioteca própria em C, 
+	  reimplementando funções comuns da biblioteca padrão, como strlen, strcpy, 
+	  atoi, entre outras. Além disso, o aluno também desenvolve funções para 
+	  manipulação de listas encadeadas. Este projeto visa consolidar o entendimento 
+	  sobre manipulação de strings, memória dinâmica e ponteiros, criando uma base 
+	  reutilizável para projetos futuros em C.
+	  <br>
+	  Além das funções básicas, você também precisa implementar funções 
+	  adicionais para manipulação de listas encadeadas, o que dá uma boa base 
+	  para os projetos mais complexos que vêm depois.`,
 
 	  skills: ["C", "Rigor", "Algorithms", "Programação Imperativa"]
 	},
@@ -60,56 +57,113 @@ const projetos = [
 	  pontos no plano complexo, otimização de desempenho e interação do usuário, 
 	  permitindo que ele explore diferentes parâmetros dos fractais. O foco é 
 	  desenvolver habilidades em matemática, gráficos computacionais e programação de baixo nível.`,
-	  skills: ["Programação 2D", "Técnicas de Otimização", "Matemática", "Programação Grafíca", "Programação Imperativa"]
+	  skills: ["C","Programação 2D", "Técnicas de Otimização", "Matemática", "Programação Grafíca", "Programação Imperativa"]
 	},
 	{
 	  titulo: "pipex",
-	  descricao: "Implementar a funcionalidade de pipes em um shell.",
-	  skills: ["Processos", "C"]
+	  descricao: `O projeto pipex foca na criação de um programa em C que 
+	  replica o funcionamento do pipeline do Unix (|). Ele deve executar 
+	  comandos em sequência, passando a saída de um comando como entrada 
+	  para o próximo (por exemplo, ls | grep txt). O projeto exige a utilização 
+	  de pipes, redirecionamento de entrada/saída e o uso de processos com fork 
+	  e execve. O objetivo é aprender sobre intercomunicação entre processos, 
+	  manipulação de arquivos e gerenciamento de memória, tudo em um contexto de 
+	  programação de sistemas.`,
+	  skills: ["Processos", "C", "Unix", "Lógica Unix", "Programação Imperativa"]
 	},
 	{
 	  titulo: "pushswap",
-	  descricao: "Desenvolver um algoritmo de ordenação utilizando stacks.",
-	  skills: ["Algoritmos", "C"]
+	  descricao: `O projeto push_swap consiste em desenvolver um programa em C 
+	  para ordenar uma pilha de números usando um conjunto limitado de operações 
+	  específicas (como sa, sb, pa, pb, ra, rb, etc.). O desafio é encontrar a 
+	  sequência mais eficiente de operações para ordenar a pilha com o menor 
+	  número de movimentos possível. Este projeto aprofunda o conhecimento em 
+	  algoritmos de ordenação, estrutura de dados (pilhas), e otimização de código, 
+	  incentivando o aluno a considerar a complexidade e eficiência dos algoritmos.`,
+	  skills: ["Algoritmos",
+		"Rigor",
+		"Algoritmos",
+		"Unix",
+		"Programação Imperativa",
+		"C",
+		"Algoritmos de classificação",
+		"Conceito de bateria e manuseio de elementos",
+		"Implementação de algoritmo"]
 	},
 	{
 	  titulo: "minishell",
-	  descricao: "Implementar um shell simples similar ao Bash.",
+	  descricao: `O projeto minishell consiste em criar um interpretador de 
+	  comandos simples, semelhante ao bash, em C. Ele permite ao usuário executar 
+	  comandos básicos, gerenciar processos, redirecionar entrada e saída, e 
+	  implementar pipes. Este projeto explora a criação de processos, o uso de 
+	  sinais, e a manipulação de ambiente, introduzindo o aluno aos conceitos 
+	  básicos de sistemas operacionais e shells.`,
 	  skills: ["Shell Scripting", "C"]
 	},
 	{
 	  titulo: "philosophers",
-	  descricao: "Resolver o problema dos filósofos comendo utilizando threads.",
+	  descricao: `O projeto philosophers envolve a implementação do famoso 
+	  problema dos "Filósofos comensais", usando threads e gerenciamento de 
+	  concorrência em C. O desafio é simular filósofos que alternam entre 
+	  pensar e comer, evitando o "deadlock" e condições de corrida. Ele 
+	  introduz conceitos essenciais de programação concorrente, como mutexes e 
+	  semáforos, aprimorando a compreensão de sincronização de threads.`,
 	  skills: ["Threads", "Concorrência"]
 	},
 	{
 	  titulo: "net_practice",
-	  descricao: "Aprender sobre redes e comunicação em C.",
+	  descricao: `No projeto net_practice, o foco está em aprender os fundamentos 
+	  de redes de computadores. Ele abrange conceitos como roteamento, sub-redes, 
+	  máscaras de rede, e encaminhamento de pacotes. O objetivo é proporcionar uma 
+	  base sólida em redes, ajudando o aluno a entender como a comunicação entre 
+	  máquinas ocorre em redes TCP/IP.`,
 	  skills: ["Redes", "C"]
 	},
 	{
 	  titulo: "cub3d",
-	  descricao: "Construir um jogo 3D simples utilizando Raycasting.",
+	  descricao: `O projeto cub3d envolve a criação de um jogo simples em 3D, 
+	  inspirado em Wolfenstein 3D, usando o conceito de "raycasting". Em C, o 
+	  aluno deve renderizar um ambiente 3D a partir de uma perspectiva em 2D, 
+	  criando gráficos e permitindo a navegação no espaço virtual. Este projeto 
+	  desenvolve habilidades em gráficos 2D/3D, matemática aplicada (geometria), 
+	  e interação com o usuário.`,
 	  skills: ["Raycasting", "C", "Gráficos"]
 	},
 	{
 	  titulo: "cpp",
-	  descricao: "Introdução à programação em C++.",
+	  descricao: `O piscina cpp é uma série de projetos que introduz os fundamentos 
+	  da programação orientada a objetos em C++. Ele explora conceitos como classes, 
+	  herança, polimorfismo, encapsulamento, e gerenciamento de memória. Cada módulo 
+	  se concentra em um aspecto específico da linguagem, proporcionando uma introdução 
+	  sólida ao paradigma de orientação a objetos e ao uso de C++ em projetos mais avançados.`,
 	  skills: ["C++", "Programação Orientada a Objetos"]
 	},
 	{
 	  titulo: "inception",
-	  descricao: "Criar um ambiente de desenvolvimento com Docker.",
+	  descricao: `O projeto inception foca na criação de uma infraestrutura de 
+	  contêineres com Docker. O aluno deve configurar serviços em contêineres 
+	  (como Nginx, MariaDB, e WordPress) que interagem em uma rede virtual. O 
+	  objetivo é aprender sobre virtualização, orquestração de contêineres e redes, 
+	  preparando o aluno para ambientes de produção e DevOps.`,
 	  skills: ["Docker", "DevOps"]
 	},
 	{
 	  titulo: "ft_irc",
-	  descricao: "Implementar um servidor IRC básico.",
+	  descricao: `No projeto ft_irc, o objetivo é desenvolver um servidor de IRC 
+	  (Internet Relay Chat) em C++ que permita a comunicação entre múltiplos clientes, 
+	  com suporte a canais e mensagens privadas. Este projeto ensina sobre redes e 
+	  protocolos, manipulação de sockets, e gestão de clientes simultâneos, aprofundando 
+	  o entendimento de comunicação em rede.`,
 	  skills: ["Redes", "C"]
 	},
 	{
 	  titulo: "ft_transcendence",
-	  descricao: "Projeto que envolve comunicação entre cliente e servidor.",
+	  descricao: `O projeto ft_transcendence consiste em criar uma aplicação web 
+	  completa, utilizando uma stack moderna (Golang, Node.js, ou outras 
+	  tecnologias web). Geralmente envolve a criação de um sistema de autenticação, 
+	  chat em tempo real, e outras funcionalidades interativas. Este projeto explora 
+	  o desenvolvimento web full-stack, com foco em segurança, autenticação, e 
+	  interfaces dinâmicas, consolidando conceitos de front-end e back-end.`,
 	  skills: ["Redes", "C"]
 	}
   ];
