@@ -168,9 +168,17 @@ const projetos = [
 	}
   ];
   // Função para gerar os slides
-  const carouselContent = document.getElementById('carousel-container');
+  function initSlider() {
+	const carouselContent = document.getElementById('carousel-container');
+	if (!carouselContent) {
+	  console.error('Elemento #carousel-container não encontrado.');
+	  return;
+	}
+	loadSlider(carouselContent);
+}
 
-  projetos.forEach((projeto, index) => {
+function loadSlider(conteudo){  
+	projetos.forEach((projeto, index) => {
 	const item = document.createElement('div');
 	item.className = `carousel-item${index === 0 ? ' active' : ''}`; // Marca o primeiro item como ativo
 	item.innerHTML = `
@@ -181,5 +189,8 @@ const projetos = [
 		${projeto.skills.map(skill => `<li>${skill}</li>`).join('')}
 	  </ul>
 	`;
-	carouselContent.appendChild(item);
+	conteudo.appendChild(item);
   });
+}
+
+  window.initSlider = initSlider;

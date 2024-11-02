@@ -18,18 +18,27 @@ body {
 #contentBody{
 	margin-top: 4dvh;
 	width: 70dvw;
+
 }
 
 #carousel-content {
 	margin-top: 4dvh;
 }
 
+#home{
+margin-left: -15dvw;
+margin-right: -10dvw;
+
+}
 
 .carousel-control-prev {
     left: -10%; /* Ajuste para posicionar fora da esquerda */
+	width: 4dvw;
 }
 .carousel-control-next {
     right: -10%; /* Ajuste para posicionar fora da direita */
+	width: 4dvw;
+
 }
 
 .carousel-control-prev-icon,

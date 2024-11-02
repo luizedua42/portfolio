@@ -14,3 +14,22 @@ function toggleMode() {
 		body.style.backgroundImage = "linear-gradient(to right,  rgb(209, 209, 209) 10%, #a1a1a1)";
 	}
 }
+
+
+function spa(url, callback) {
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar a página: ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('contentBody').innerHTML = data;
+			if (callback) callback();
+		})
+        .catch(error => {
+            console.error('Erro:', error);
+            document.getElementById('contentBody').innerHTML = '<p>Erro ao carregar o conteúdo.</p>';
+        });
+}
