@@ -41,14 +41,6 @@ margin-right: -10dvw;
 
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(1, 1, 1, 0.03);
-	height: 100%;
-	 /* Cor de fundo preta com 50% de opacidade */
-    /* padding: 10px; Aumenta a área de clique ao redor da seta */
-}
-
 .skills-list {
 	display: table;
 	margin: 0 auto;
