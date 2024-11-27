@@ -193,4 +193,7 @@ function loadSlider(conteudo){
   });
 }
 
-  window.initSlider = initSlider;
+window.initSlider = initSlider;
+document.addEventListener('DOMContentLoaded', function() {
+  initSlider();
+});

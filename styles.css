@@ -6,6 +6,9 @@ body {
 	font-family: "chakra petch";
 }
 
+#aboutme{
+	height: 30dvh;
+}
 #menu {
 	margin-top: 10dvh;
 	margin-right: 10dvw;
@@ -17,7 +20,7 @@ body {
 
 #contentBody{
 	margin-top: 4dvh;
-	width: 70dvw;
+	width: 100%;
 
 }
 
@@ -25,18 +28,19 @@ body {
 	margin-top: 4dvh;
 }
 
+/*
 #home{
-margin-left: -15dvw;
-margin-right: -10dvw;
-
+	margin-left: -10dvw;
+	margin-right: -10dvw; 
 }
+*/
 
 .carousel-control-prev {
-    left: -10%; /* Ajuste para posicionar fora da esquerda */
+    left: -5%; /*Ajuste para posicionar fora da esquerda */
 	width: 4dvw;
 }
 .carousel-control-next {
-    right: -10%; /* Ajuste para posicionar fora da direita */
+    right: -5%; /*Ajuste para posicionar fora da direita */
 	width: 4dvw;
 
 }
