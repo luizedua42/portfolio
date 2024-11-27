@@ -20,13 +20,18 @@ body {
 
 #contentBody{
 	margin-top: 4dvh;
-	width: 100%;
-
+	width: 90%;
+	justify-content: center;
 }
 
 #carousel-content {
-	margin-top: 4dvh;
+	margin-top: 2dvh;
 }
+
+
+/* #carousel-container{
+	width: 80%;
+} */
 
 /*
 #home{
@@ -36,12 +41,15 @@ body {
 */
 
 .carousel-control-prev {
-    left: -5%; /*Ajuste para posicionar fora da esquerda */
-	width: 4dvw;
+    left: -8%; /*Ajuste para posicionar fora da esquerda */
+	width: 8dvw;
+	filter: invert(1);
+
 }
 .carousel-control-next {
-    right: -5%; /*Ajuste para posicionar fora da direita */
-	width: 4dvw;
+    right: -8%; /*Ajuste para posicionar fora da direita */
+	width: 8dvw;
+	filter: invert(1);
 
 }
 

@@ -180,10 +180,11 @@ const projetos = [
 function loadSlider(conteudo){  
 	projetos.forEach((projeto, index) => {
 	const item = document.createElement('div');
+	item.id="texto-projeto"
 	item.className = `carousel-item${index === 0 ? ' active' : ''}`; // Marca o primeiro item como ativo
 	item.innerHTML = `
-	  <h2 class="mt-4 text-center">${projeto.titulo}</h2>
-	  <p class="mt-4 text-center">${projeto.descricao}</p>
+	  <h2 class="mt-2 text-center">${projeto.titulo}</h2>
+	  <p class="mt-2">${projeto.descricao}</p>
 	  <h5 class="mt-2 text-center">Skills Desenvolvidas</h5>
 	  <ul class="skills-list">
 		${projeto.skills.map(skill => `<li>${skill}</li>`).join('')}
@@ -194,6 +195,3 @@ function loadSlider(conteudo){
 }
 
 window.initSlider = initSlider;
-document.addEventListener('DOMContentLoaded', function() {
-  initSlider();
-});
