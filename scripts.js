@@ -13,8 +13,27 @@ function toggleMode() {
 		themeIcon.className = "bi bi-moon-fill";
 		body.style.backgroundImage = "linear-gradient(to right,  rgb(209, 209, 209) 10%, #a1a1a1)";
 	}
+	toggleLinkColor();
 }
 
+function toggleLinkColor(){
+
+	
+	const links = document.querySelectorAll('.my-links');
+	if (!links) {
+		console.log("No links found");
+		return;
+	}
+	links.forEach(link => {
+		if (link.classList.contains('link-light')) {
+			link.classList.remove('link-light');
+			link.classList.add('link-dark');
+		} else {
+			link.classList.remove('link-dark');
+			link.classList.add('link-light');
+		}
+	});
+}
 
 function spa(url, callback) {
     fetch(url)
