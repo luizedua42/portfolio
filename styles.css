@@ -40,6 +40,16 @@ body {
 }
 */
 
+:root[data-bs-theme="light"] .my-links {
+	color: black; /* Cor dos links no tema claro */
+	text-decoration-color: black;
+  }
+  
+  :root[data-bs-theme="dark"] .my-links {
+	color: white; /* Cor dos links no tema escuro */
+	text-decoration-color: white;
+}
+
 .carousel-control-prev {
     left: -8%; /*Ajuste para posicionar fora da esquerda */
 	width: 8dvw;
@@ -59,7 +69,7 @@ body {
 	margin: 0 auto;
 }
 
-#skills {
+.glassy {
 	background: rgba(132, 132, 132, 0.2);
 	border-radius: 16px;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

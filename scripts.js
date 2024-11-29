@@ -13,19 +13,22 @@ function toggleMode() {
 		themeIcon.className = "bi bi-moon-fill";
 		body.style.backgroundImage = "linear-gradient(to right,  rgb(209, 209, 209) 10%, #a1a1a1)";
 	}
-	toggleLinkColor();
+	// toggleLinkColor();
 }
 
 function toggleLinkColor(){
 
-	
+	// const theme = document.html.getAttribute('data-bs-theme');
+	const theme = document.documentElement.getAttribute('data-bs-theme');
+	// const theme = getComputedStyle(document.documentElement).getPropertyValue('--bs-theme-color').trim();
 	const links = document.querySelectorAll('.my-links');
 	if (!links) {
 		console.log("No links found");
 		return;
 	}
 	links.forEach(link => {
-		if (link.classList.contains('link-light')) {
+		console.log(theme);
+		if (theme === 'light') {
 			link.classList.remove('link-light');
 			link.classList.add('link-dark');
 		} else {
