@@ -51,13 +51,15 @@ body {
 }
 
 .carousel-control-prev {
+	top: 40%;
     left: -8%; /*Ajuste para posicionar fora da esquerda */
 	width: 8dvw;
 	filter: invert(1);
 
 }
 .carousel-control-next {
-    right: -8%; /*Ajuste para posicionar fora da direita */
+	top: 40%;
+	right: -8%; /*Ajuste para posicionar fora da direita */
 	width: 8dvw;
 	filter: invert(1);
 
@@ -71,29 +73,30 @@ body {
 	padding: 2%;
 }
 
+
 .skills-container {
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 16px;
-  }
-  
-  .skills-column {
-	display: flex;
 	flex-direction: column;
+	gap: 16px;
+	justify-content: center;
+	width: 60dvw;
+	height: auto;
+}
+
+.skills-row {
+	display: flex;
+	justify-content: center;
 	gap: 8px;
-  }
-  
-  .skill-item {
+	flex-wrap: wrap;
+}
+
+.skill-item {
 	padding: 8px;
 	border: 1px solid;
 	border-radius: 25px;
 	text-align: center;
-  }
-
-.skills-list {
-	display: inline;
-	margin: 0 auto;
+	flex: 1;
+	box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
 }
 
 .glassy {

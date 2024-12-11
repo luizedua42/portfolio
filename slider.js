@@ -183,11 +183,14 @@ function loadSlider(conteudo){
 	item.id="texto-projeto"
 	item.className = `carousel-item${index === 0 ? ' active' : ''}`; // Marca o primeiro item como ativo
 	item.innerHTML = `
-	  <h2 class="mt-2 text-center">${projeto.titulo}</h2>
+	  <h2 class="mt-1 text-center">${projeto.titulo}</h2>
 	  <p class="mt-2">${projeto.descricao}</p>
-	  <h5 class="mt-2 text-center">Skills Desenvolvidas</h5>
-	`;
-	item.appendChild(createSkillsList(projeto.skills));
+	  <h5 class="mt-4 text-center">Skills Desenvolvidas</h5>
+	  <div class="skills-list d-flex justify-content-center align-items-center">
+		${createSkillsList(projeto.skills).outerHTML}
+	  </div>
+	  `;
+	// item.appendChild(createSkillsList(projeto.skills));
 	conteudo.appendChild(item);
   });
 }
@@ -195,31 +198,61 @@ function loadSlider(conteudo){
 	// 	${projeto.skills.map(skill => `<li>${skill}</li>`).join('')}
 	//   </ul>
 
-function createSkillsList(skills) {
-	const container = document.createElement('div');
-	container.className = 'skills-container';
 
-	const skillsPerColumn = skills.length % 2 === 0 ? 2 : 3;
-	const columns = Math.ceil(skills.length / skillsPerColumn);
-
-	for (let i = 0; i < columns; i++) {
-	const column = document.createElement('div');
-	column.className = 'skills-column';
-
-	for (let j = 0; j < skillsPerColumn; j++) {
-		const index = i * skillsPerColumn + j;
-		if (index < skills.length) {
-			const skill = document.createElement('div');
-			skill.className = 'skill-item';
-			skill.textContent = skills[index];
-			column.appendChild(skill);
+	function createSkillsList(skills) {
+		const container = document.createElement('div');
+		container.className = 'skills-container';
+	  
+		const skillsPerRow = 3; // Número de habilidades por linha
+		const rows = Math.ceil(skills.length / skillsPerRow);
+	  
+		for (let i = 0; i < rows; i++) {
+		  const row = document.createElement('div');
+		  row.className = 'skills-row';
+	  
+		  for (let j = 0; j < skillsPerRow; j++) {
+			const index = i * skillsPerRow + j;
+			if (index < skills.length) {
+			  const skillItem = document.createElement('div');
+			  skillItem.className = 'skill-item';
+			  skillItem.textContent = skills[index];
+			  row.appendChild(skillItem);
+			}
+		  }
+	  
+		  container.appendChild(row);
 		}
-	}
+	  
+		return container;
+	  }
 
-	container.appendChild(column);
-  }
+// function createSkillsList(skills) {
+// 	const container = document.createElement('div');
+// 	container.className = 'skills-container';
 
-  return container;
-}
+// 	const columns = Math.ceil(Math.sqrt(skills.length)); 
+// 	const skillsPerColumn = Math.ceil(skills.length / columns);
+// 	// const skillsPerColumn = skills.length % 2 === 0 ? 2 : 3;
+// 	// const columns = Math.ceil(skills.length / skillsPerColumn);
+
+// 	for (let i = 0; i < columns; i++) {
+// 	const column = document.createElement('div');
+// 	column.className = 'skills-column flex-grow-1';
+
+// 	for (let j = 0; j < skillsPerColumn; j++) {
+// 		const index = i * skillsPerColumn + j;
+// 		if (index < skills.length) {
+// 			const skill = document.createElement('div');
+// 			skill.className = 'skill-item';
+// 			skill.textContent = skills[index];
+// 			column.appendChild(skill);
+// 		}
+// 	}
+
+// 	container.appendChild(column);
+//   }
+
+//   return container;
+// }
 
 window.initSlider = initSlider;
