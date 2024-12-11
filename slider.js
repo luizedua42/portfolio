@@ -186,12 +186,40 @@ function loadSlider(conteudo){
 	  <h2 class="mt-2 text-center">${projeto.titulo}</h2>
 	  <p class="mt-2">${projeto.descricao}</p>
 	  <h5 class="mt-2 text-center">Skills Desenvolvidas</h5>
-	  <ul class="skills-list">
-		${projeto.skills.map(skill => `<li>${skill}</li>`).join('')}
-	  </ul>
 	`;
+	item.appendChild(createSkillsList(projeto.skills));
 	conteudo.appendChild(item);
   });
+}
+	//   <ul class="skills-list">
+	// 	${projeto.skills.map(skill => `<li>${skill}</li>`).join('')}
+	//   </ul>
+
+function createSkillsList(skills) {
+	const container = document.createElement('div');
+	container.className = 'skills-container';
+
+	const skillsPerColumn = skills.length % 2 === 0 ? 2 : 3;
+	const columns = Math.ceil(skills.length / skillsPerColumn);
+
+	for (let i = 0; i < columns; i++) {
+	const column = document.createElement('div');
+	column.className = 'skills-column';
+
+	for (let j = 0; j < skillsPerColumn; j++) {
+		const index = i * skillsPerColumn + j;
+		if (index < skills.length) {
+			const skill = document.createElement('div');
+			skill.className = 'skill-item';
+			skill.textContent = skills[index];
+			column.appendChild(skill);
+		}
+	}
+
+	container.appendChild(column);
+  }
+
+  return container;
 }
 
 window.initSlider = initSlider;

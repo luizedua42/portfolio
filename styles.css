@@ -29,9 +29,9 @@ body {
 }
 
 
-/* #carousel-container{
-	width: 80%;
-} */
+ #carousel-container{
+	height: 60dvh;
+}
 
 /*
 #home{
@@ -63,9 +63,36 @@ body {
 
 }
 
+#text-about {
+	height: auto;
+}
+
+#texto-projeto {
+	padding: 2%;
+}
+
+.skills-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 16px;
+  }
+  
+  .skills-column {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+  }
+  
+  .skill-item {
+	padding: 8px;
+	border: 1px solid;
+	border-radius: 25px;
+	text-align: center;
+  }
 
 .skills-list {
-	display: table;
+	display: inline;
 	margin: 0 auto;
 }
 
