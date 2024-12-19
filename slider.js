@@ -98,7 +98,7 @@ const projetos = [
 	  implementar pipes. Este projeto explora a criação de processos, o uso de 
 	  sinais, e a manipulação de ambiente, introduzindo o aluno aos conceitos 
 	  básicos de sistemas operacionais e shells.`,
-	  skills: ["Shell Scripting", "C"]
+	  skills: ["Shell Scripting", "C", "Processos", "Unix", "Sinais", "Redirecionamento de I/O", "Lexing e Parsing"]
 	},
 	{
 	  titulo: "philosophers",
@@ -108,7 +108,7 @@ const projetos = [
 	  pensar e comer, evitando o "deadlock" e condições de corrida. Ele 
 	  introduz conceitos essenciais de programação concorrente, como mutexes e 
 	  semáforos, aprimorando a compreensão de sincronização de threads.`,
-	  skills: ["Threads", "Concorrência"]
+	  skills: ["Threads", "Concorrência", "C", "Mutexes"]
 	},
 	{
 	  titulo: "net_practice",
@@ -117,7 +117,7 @@ const projetos = [
 	  máscaras de rede, e encaminhamento de pacotes. O objetivo é proporcionar uma 
 	  base sólida em redes, ajudando o aluno a entender como a comunicação entre 
 	  máquinas ocorre em redes TCP/IP.`,
-	  skills: ["Redes", "C"]
+	  skills: ["Redes", "TCP/IP", "Roteamento", "Sub-redes"]
 	},
 	{
 	  titulo: "cub3d",
@@ -154,17 +154,17 @@ const projetos = [
 	  com suporte a canais e mensagens privadas. Este projeto ensina sobre redes e 
 	  protocolos, manipulação de sockets, e gestão de clientes simultâneos, aprofundando 
 	  o entendimento de comunicação em rede.`,
-	  skills: ["Redes", "C"]
+	  skills: ["Redes", "C", "C++", "Sockets", "Protocolo IRC", "Programação de Servidor"]
 	},
 	{
 	  titulo: "ft_transcendence",
 	  descricao: `O projeto ft_transcendence consiste em criar uma aplicação web 
-	  completa, utilizando uma stack moderna (Golang, Node.js, ou outras 
-	  tecnologias web). Geralmente envolve a criação de um sistema de autenticação, 
+	  completa, utilizando uma stack moderna (Python, JavaScript, HTML, CSS, etc.).
+	  Geralmente envolve a criação de um sistema de autenticação, 
 	  chat em tempo real, e outras funcionalidades interativas. Este projeto explora 
 	  o desenvolvimento web full-stack, com foco em segurança, autenticação, e 
 	  interfaces dinâmicas, consolidando conceitos de front-end e back-end.`,
-	  skills: ["Redes", "C"]
+	  skills: ["Desenvolvimento Web", "Full-Stack", "IA", "Deploy", "Django", "websockets"]
 	}
   ];
   // Função para gerar os slides
